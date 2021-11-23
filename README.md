@@ -1,4 +1,4 @@
-# I.PHI dataset
+# I.PHI dataset: ancient Greek inscriptions
 
 Thea Sommerschield<sup>\*</sup>, Yannis Assael<sup>\*</sup>, Brendan Shillingford, Mahyar Bordbar, John Pavlopoulos, Marita Chatzipanagiotou, Ion Androutsopoulos, Jonathan Prag, Nando de Freitas
 
@@ -20,6 +20,17 @@ python -m ithaca.data.iphi_download  --connections=1
 ```
 
 To enable multi-threaded processing set: `--connections=100`.
+
+## Reference
+When using this dataset, please cite the [Packard Humanities Institute](https://inscriptions.packhum.org/) database of ancient Greek inscriptions and:
+```
+@misc{sommerschield2021iphi,
+  title={{I.PHI} dataset: ancient Greek inscriptions},
+  author={Sommerschield*, Thea and Assael*, Yannis and Shillingford, Brendan and Bordbar, Mahyar and Pavlopoulos, John and Chatzipanagiotou, Marita and Androutsopoulos, Ion and Prag, Jonathan and de Freitas, Nando},
+  howpublished = {\url{https://github.com/sommerschield/iphi}},
+  year={2021}
+}
+```
 
 ## License
 Apache License, Version 2.0
