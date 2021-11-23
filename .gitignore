@@ -6,8 +6,9 @@ __pycache__/
 *.so
 
 # Dirs
-/datasets/
-/tf/
-/data/
 .idea
-pythia/data/datasets
+/ithaca/data/iphi.json
+/ithaca/data/iphi-region-main.txt
+/ithaca/data/iphi-region-sub.txt
+/ithaca/data/iphi-wordlist.txt
+/ithaca/data/iphi-json/

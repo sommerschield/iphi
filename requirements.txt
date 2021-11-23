@@ -1,10 +1,6 @@
-requests==2.22.0
-bs4==0.0.1
-coloredlogs==10.0
-dm-sonnet==1.23
-editdistance==0.5.3
-lxml==4.4.1
-nltk==3.4.5
-tensorflow-gpu==1.15
-tqdm==4.36.1
-cloudscraper==1.2.24
+beautifulsoup4==4.9.3
+cloudscraper==1.2.58
+nltk==3.6.2
+numpy==1.21.2
+requests==2.26.0
+tqdm==4.62.2
