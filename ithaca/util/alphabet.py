@@ -1,21 +1,16 @@
-"""
-Copyright 2021 Thea Sommerschield, Jonathan Prag,
-Marita Chatzipanagiotou, John Pavlopoulos, Ion Androutsopoulos,
-University of Oxford, DeepMind Technologies Limited, Google LLC
-
-Licensed under the Apache License, Version 2.0 (the 'License');
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an 'AS IS' BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-"""
-
+# Copyright 2021 the Ithaca Authors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 """Alphabet classes."""
 
 import re
@@ -54,8 +49,8 @@ class Alphabet:
     idx2word = [self.pad, self.sos, self.unk]
     if wordlist_file:
       idx2word += [
-          w_c.split('\t')[0]
-          for w_c in wordlist_file.read().split('\n')[:wordlist_size]
+          w_c.split(';')[0]
+          for w_c in wordlist_file.read().strip().split('\n')[:wordlist_size]
       ]
     self.idx2word = np.array(idx2word)
     self.word2idx = {self.idx2word[i]: i for i in range(len(self.idx2word))}

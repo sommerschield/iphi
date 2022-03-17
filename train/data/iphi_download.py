@@ -1,20 +1,18 @@
-"""
-Copyright 2021 Thea Sommerschield, Jonathan Prag,
-Marita Chatzipanagiotou, John Pavlopoulos, Ion Androutsopoulos,
-University of Oxford, DeepMind Technologies Limited, Google LLC
-
-Licensed under the Apache License, Version 2.0 (the 'License');
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an 'AS IS' BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-"""
+# Copyright 2021 Thea Sommerschield, Jonathan Prag,
+# Marita Chatzipanagiotou, John Pavlopoulos, Ion Androutsopoulos,
+# University of Oxford, DeepMind Technologies Limited, Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
 import argparse
 from collections import Counter
@@ -31,10 +29,11 @@ import cloudscraper
 from tqdm import tqdm
 
 from ithaca.util.alphabet import GreekAlphabet
-from ithaca.data.iphi_dates import date_parser_phi
-from ithaca.data.iphi_text_clean import strip_accents
-from ithaca.data.iphi_text_clean import text_clean_phi
-from ithaca.data.iphi_text_clean import text_to_sentences
+from train.data.iphi_dates import date_parser_phi
+from train.data.iphi_text_clean import strip_accents
+from train.data.iphi_text_clean import text_clean_phi
+from train.data.iphi_text_clean import text_to_sentences
+
 
 p = argparse.ArgumentParser(prog='I.PHI', description='I.PHI JSON downloader.')
 p.add_argument('--connections', default=1, type=int, metavar='N',
@@ -42,19 +41,19 @@ p.add_argument('--connections', default=1, type=int, metavar='N',
 p.add_argument('--timeout', default=5, type=int, metavar='N',
                help='seconds to timeout')
 p.add_argument('--output_dir',
-               default='ithaca/data/iphi-json/', type=str,
+               default='train/data/iphi-json/', type=str,
                help='output path')
 p.add_argument('--output_json',
-               default='ithaca/data/iphi.json', type=str,
+               default='train/data/iphi.json', type=str,
                help='output json dataset')
 p.add_argument('--output_word_list',
-               default='ithaca/data/iphi-wordlist.txt',
+               default='train/data/iphi-wordlist.txt',
                type=str, help='output wordlist')
 p.add_argument('--output_region_main_list',
-               default='ithaca/data/iphi-region-main.txt',
+               default='train/data/iphi-region-main.txt',
                type=str, help='output region main list')
 p.add_argument('--output_region_sub_list',
-               default='ithaca/data/iphi-region-sub.txt',
+               default='train/data/iphi-region-sub.txt',
                type=str, help='output region sub list')
 p.add_argument('--min_text_len', default=10, type=int, metavar='N',
                help='maximum text length')

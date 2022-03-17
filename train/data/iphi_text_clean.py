@@ -1,25 +1,28 @@
-"""
-Copyright 2021 Thea Sommerschield, Jonathan Prag,
-Marita Chatzipanagiotou, John Pavlopoulos, Ion Androutsopoulos,
-University of Oxford, DeepMind Technologies Limited, Google LLC
-
-Licensed under the Apache License, Version 2.0 (the 'License');
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an 'AS IS' BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-"""
+# Copyright 2021 Thea Sommerschield, Jonathan Prag,
+# Marita Chatzipanagiotou, John Pavlopoulos, Ion Androutsopoulos,
+# University of Oxford, DeepMind Technologies Limited, Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
 import re
 import unicodedata
 
-from nltk import tokenize
+import nltk
+
+try:
+  nltk.data.find('tokenizers/punkt')
+except LookupError:
+  nltk.download('punkt')
 
 
 def strip_accents(s):
@@ -31,7 +34,7 @@ def strip_accents(s):
 def text_to_sentences(t, alphabet):
   '''Tokenizes sentences and removes the empty ones.'''
   sentences = []
-  for s in tokenize.sent_tokenize(t):
+  for s in nltk.tokenize.sent_tokenize(t):
     # remove all puntuation from sentence
     s = re.sub(r'[%s]+' % ''.join(alphabet.punctuation), ' ', s)
 

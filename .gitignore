@@ -7,8 +7,8 @@ __pycache__/
 
 # Dirs
 .idea
-/ithaca/data/iphi.json
-/ithaca/data/iphi-region-main.txt
-/ithaca/data/iphi-region-sub.txt
-/ithaca/data/iphi-wordlist.txt
-/ithaca/data/iphi-json/
+/train/data/iphi.json
+/train/data/iphi-region-main.txt
+/train/data/iphi-region-sub.txt
+/train/data/iphi-wordlist.txt
+/train/data/iphi-json/
