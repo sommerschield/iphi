@@ -21,6 +21,8 @@ python -m ithaca.data.iphi_download  --connections=1
 
 To enable multi-threaded processing set: `--connections=100`.
 
+Preprocessed I.PHI dataset uploaded by @Holger.Danske800: [link](https://drive.google.com/drive/folders/1WupkpBTP7BTGTqAwKQ8BSFrCaQTbKX9c)
+
 ## Reference
 When using this dataset, please cite the [Packard Humanities Institute](https://inscriptions.packhum.org/) database of ancient Greek inscriptions and:
 ```
