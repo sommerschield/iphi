@@ -16,7 +16,7 @@ python -m nltk.downloader punkt
 ## Dataset generation
 ```
 # Download and process PHI (this will take a while)
-python -m ithaca.data.iphi_download  --connections=1
+python -m train.data.iphi_download  --connections=1
 ```
 
 To enable multi-threaded processing set: `--connections=100`.
