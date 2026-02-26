@@ -34,6 +34,9 @@ When using this dataset, please cite the [Packard Humanities Institute](https://
 }
 ```
 
+## Acknowledgements
+This project relies on the availability of a high-quality dataset of ancient Greek inscriptions, built through centuries of scholarly collection and decades of digital editorial work. In particular, it draws on the Searchable Greek Inscriptions database made available by the Packard Humanities Institute, generously supported by David Packard: [inscriptions.packhum.org](https://inscriptions.packhum.org/). This resource brings together a large proportion of published inscriptions in a searchable digital format. Any use of the dataset generated here should acknowledge and cite the Packard Humanities Institute project, as well as the underlying scholarly contributions on which it depends.
+
 ## License
 Apache License, Version 2.0
 
